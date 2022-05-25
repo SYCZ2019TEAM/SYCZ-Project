@@ -47,7 +47,7 @@ body{
     font-weight: bold;
 }
 .time:first-letter{
-    color: rgb(50, 50, 200);
+    color: rgb(200, 50, 50);
 }
 @media screen and (max-width: 700px) {
     .favicon {
