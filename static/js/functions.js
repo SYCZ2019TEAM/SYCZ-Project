@@ -35,7 +35,11 @@ export const page = {
             if(_date.getMinutes() < 10){
                 _tempTime += '0';
             }
-            _tempTime += _date.getMinutes();
+            _tempTime += _date.getMinutes() + ':';
+            if(_date.getSeconds() < 10){
+                _tempTime += '0';
+            }
+            _tempTime += _date.getSeconds();
             return _tempTime;
         }
     }
