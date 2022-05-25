@@ -28,14 +28,14 @@ export const page = {
         this.getTime = function(){
             const _date = new Date();
             let _tempTime = '';
-            if(_date.getHours() + 1 < 10){
+            if(_date.getHours() < 10){
                 _tempTime += '0';
             }
-            _tempTime += _date.getHours() + 1 + ':';
-            if(_date.getMinutes() + 1 < 10){
+            _tempTime += _date.getHours() + ':';
+            if(_date.getMinutes() < 10){
                 _tempTime += '0';
             }
-            _tempTime += _date.getMinutes() + 1;
+            _tempTime += _date.getMinutes();
             return _tempTime;
         }
     }
