@@ -46,6 +46,7 @@ body{
     align-items: center;
 }
 .time{
+    height: 66px;
     color: white;
     font-size: 50px;
     font-weight: bold;
