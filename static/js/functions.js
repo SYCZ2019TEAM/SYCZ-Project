@@ -23,7 +23,7 @@ export const page = {
             }
             xhr.send(null);
         }
-    }
+    },
     Time: function(){
         this.getTime = function(){
             const _date = new Date();
