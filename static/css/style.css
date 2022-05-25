@@ -33,7 +33,7 @@ body{
 }
 .app{
     position: fixed;
-    width: 100%;
+    width: calc(100% - 20px);
     height: 100%;
     left: 0;
     top: 0;
