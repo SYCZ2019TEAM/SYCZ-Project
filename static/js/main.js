@@ -1,6 +1,7 @@
 import { page } from "./functions.js";
 const init = new page.Init;
 const time = new page.Time;
+const cookie = new page.Cookie;
 init.loadImage();
 init.getBackground('./static/img/1920.jpg','image/JPEG');
 const clock = setInterval(function(){
