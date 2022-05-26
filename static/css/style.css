@@ -61,10 +61,10 @@ body{
 }
 .search-box{
     max-width: 500px;
-    width: calc(100% - 30px);
-    height: 30px;
+    width: calc(100% - 40px);
+    height: 20px;
     margin-top: 10px;
-    padding: 5px;
+    padding: 10px;
     background: rgb(250, 250, 250, 0.6);
     backdrop-filter: blur(5px);
     border-radius: 10px;
@@ -76,10 +76,14 @@ body{
     flex-grow: 0;
     height: 100%;
     width: auto;
+    margin-right: 10px;
 }
 .search-box #box{
     flex-grow: 1;
-    height: 100%;
+    height: calc(100% - 10px);
+    /* background: transparent; */
+    border: none;
+    outline: none;
 }
 @media screen and (max-width: 700px) {
     .favicon {
