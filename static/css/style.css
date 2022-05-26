@@ -80,7 +80,7 @@ body{
 }
 .search-box #box{
     flex-grow: 1;
-    height: calc(100% - 10px);
+    height: 100%;
     /* background: transparent; */
     border: none;
     outline: none;
