@@ -6,8 +6,8 @@ init.getBackground('./static/img/1920.jpg','image/JPEG');
 const clock = setInterval(function(){
     document.getElementsByClassName('time')[0].innerHTML = time.getTime();
 }, 50);
-const s-button = document.getElementById('search');
-const s-box = document.getElementById('box');
+var s-button = document.getElementById('search');
+var s-box = document.getElementById('box');
 s-button.addEventListener('click',function(){
     window.open('https://baidu.com/s?wd=' + s-box.value,'_blank');
 });
