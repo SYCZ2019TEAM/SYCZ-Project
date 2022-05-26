@@ -13,7 +13,7 @@ body{
     width: 100%;
     margin: 0;
     padding: 0;
-    transition: all 0.2s ease;
+    transition: background 0.5s ease;
     user-select: none;
 }
 .favicon{
@@ -22,12 +22,14 @@ body{
     top: 50px;
     width: 100px;
     height: auto;
+    transition: all 0.2s ease;
 }
 .copyright{
     color: rgb(250,250,250);
     position: fixed;
     left: 50px;
     bottom: 50px;
+    transition: all 0.2s ease;
 }
 .overlay{
     position: fixed;
@@ -80,6 +82,7 @@ body{
     height: 100%;
     width: auto;
     margin-right: 10px;
+    cursor: pointer;
 }
 .search-box #box{
     flex-grow: 1;
