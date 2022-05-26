@@ -10,13 +10,19 @@ const clock = setInterval(function(){
 const s_button = document.getElementById('search');
 const s_box = document.getElementById('box');
 s_button.addEventListener('click',function(){
-    window.open('https://baidu.com/s?wd=' + s_box.value,'_blank');
+    const content = s_box.value;
+    if(content != null){
+        window.open('https://baidu.com/s?wd=' + content,'_blank');
+    }
 });
 s_box.addEventListener('keypress',function(e){
+    const content = s_box.value;
     let keyCode = null;
     if(e.which) keyCode = e.which;
     else if(e.keyCode) keyCode = e.keyCode;
     if(keyCode == 13) {
-        window.open('https://baidu.com/s?wd=' + s_box.value,'_blank');
+        if(content != null){
+            window.open('https://baidu.com/s?wd=' + s_box.value,'_blank');
+        }
     };
 });
