@@ -25,7 +25,7 @@ export const page = {
         }
     },
     Time: function(){
-        this.getTime = function(){
+        this.getTime = function(_displaySecound = false){
             const _date = new Date();
             let _tempTime = '';
             if(_date.getHours() < 10){
@@ -35,11 +35,14 @@ export const page = {
             if(_date.getMinutes() < 10){
                 _tempTime += '0';
             }
-            _tempTime += _date.getMinutes() + ':';
-            if(_date.getSeconds() < 10){
-                _tempTime += '0';
+            _tempTime += _date.getMinutes();
+            if(_displaySecound == true){
+                _tempTime += ':';
+                if(_date.getSeconds() < 10){
+                    _tempTime += '0';
+                }
+                _tempTime += _date.getSeconds();
             }
-            _tempTime += _date.getSeconds();
             return _tempTime;
         }
     }
