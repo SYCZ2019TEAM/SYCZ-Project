@@ -31,6 +31,7 @@ a:hover{
     width: 100px;
     height: auto;
     transition: all 0.2s ease;
+    z-index: 1;
 }
 .copyright{
     color: rgb(250,250,250);
@@ -39,6 +40,7 @@ a:hover{
     left: 50px;
     bottom: 50px;
     transition: all 0.2s ease;
+    z-index: 1;
 }
 .overlay{
     position: fixed;
@@ -47,7 +49,7 @@ a:hover{
     top: 0px;
     left: 0px;
     background-color: rgba(30, 30, 30, 0.6);
-    z-index: -2;
+    z-index: -1;
 }
 .app{
     position: fixed;
@@ -62,7 +64,6 @@ a:hover{
     justify-content: center;
     align-content: center;
     align-items: center;
-    z-index: -1;
 }
 .time{
     height: 66px;
