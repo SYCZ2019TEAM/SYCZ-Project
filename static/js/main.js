@@ -13,7 +13,7 @@ s_button.addEventListener('click',function(){
     const content = s_box.value;
     console.log(content);
     if(content != ''){
-        window.open('https://baidu.com/s?wd=' + content,'_blank');
+        window.open('https://bing.com/search?q=' + content,'_blank');
     }
 });
 s_box.addEventListener('keypress',function(e){
@@ -23,7 +23,7 @@ s_box.addEventListener('keypress',function(e){
     else if(e.keyCode) keyCode = e.keyCode;
     if(keyCode == 13) {
         if(content != ''){
-            window.open('https://baidu.com/s?wd=' + s_box.value,'_blank');
+            window.open('https://bing.com/search?q=' + s_box.value,'_blank');
         }
     };
 });
