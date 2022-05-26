@@ -6,13 +6,14 @@ init.getBackground('./static/img/1920.jpg','image/JPEG');
 const clock = setInterval(function(){
     document.getElementsByClassName('time')[0].innerHTML = time.getTime();
 }, 50);
-var s-button = document.getElementById('search');
-var s-box = document.getElementById('box');
-s-button.addEventListener('click',function(){
-    window.open('https://baidu.com/s?wd=' + s-box.value,'_blank');
+const searchbox = document.getElementsByClassName('searchbox')[0];
+const s_button = searchbox.getElementById('search');
+const s_box = searchbox.getElementById('box');
+s_button.addEventListener('click',function(){
+    window.open('https://baidu.com/s?wd=' + s_box.value,'_blank');
 });
-s-box.addEventListener('onkeypress',function(event){
+s_box.addEventListener('onkeypress',function(event){
     if(event.KeyCode = 13){
-        window.open('https://baidu.com/s?wd=' + s-box.value,'_blank');
+        window.open('https://baidu.com/s?wd=' + s_box.value,'_blank');
     }
 });
