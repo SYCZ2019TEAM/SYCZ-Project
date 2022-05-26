@@ -13,7 +13,7 @@ s_button.addEventListener('click',function(){
 });
 s_box.addEventListener('keypress',function(){
     console.log('[Notice] You press the key. Code = ' + event.KeyCode);
-    if(event.KeyCode = 13){
+    if(event.which = 13){
         window.open('https://baidu.com/s?wd=' + s_box.value,'_blank');
     }
 });
