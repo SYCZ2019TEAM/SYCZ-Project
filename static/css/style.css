@@ -21,7 +21,7 @@ a{
     color: rgb(245,245,245);
 }
 a:hover{
-    background: rgb(20,20,100);
+    background: rgb(192,192,255);
 }
 .favicon{
     position: fixed;
