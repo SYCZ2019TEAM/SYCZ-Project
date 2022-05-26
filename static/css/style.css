@@ -27,6 +27,7 @@ body{
 .copyright{
     color: rgb(250,250,250);
     position: fixed;
+    max-width: calc(100% - 100px);
     left: 50px;
     bottom: 50px;
     transition: all 0.2s ease;
@@ -99,5 +100,6 @@ body{
     .copyright{
         left: 25px;
         bottom: 25px;
+        max-width: calc(100% - 50px);
     }
 }
