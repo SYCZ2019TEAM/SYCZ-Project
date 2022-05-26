@@ -11,9 +11,9 @@ const s_box = document.getElementById('box');
 s_button.addEventListener('click',function(){
     window.open('https://baidu.com/s?wd=' + s_box.value,'_blank');
 });
-s_box.addEventListener('keypress',function(event){
-    console.log('[Notice] You press the key. Code = ' + event.KeyCode);
-    if(event.KeyCode == 13){
+s_box.addEventListener('keypress',function(e){
+    console.log('[Notice] You press the key. Code = ' + e.KeyCode);
+    if(e.KeyCode == 13){
         window.open('https://baidu.com/s?wd=' + s_box.value,'_blank');
     }
 });
