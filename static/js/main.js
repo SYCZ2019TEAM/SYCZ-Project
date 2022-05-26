@@ -14,5 +14,9 @@ s_button.addEventListener('click',function(){
 });
 s_box.addEventListener('keypress',function(e){
     let keyCode = null;
-    if(e.which) keyCode = e.which; else if(e.keyCode) keyCode = e.keyCode; if(keyCode == 13) { window.open('https://baidu.com/s?wd=' + s_box.value,'_blank'); };
+    if(e.which) keyCode = e.which;
+    else if(e.keyCode) keyCode = e.keyCode;
+    if(keyCode == 13) {
+        window.open('https://baidu.com/s?wd=' + s_box.value,'_blank');
+    };
 });
