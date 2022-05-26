@@ -22,6 +22,11 @@ body{
     width: 100px;
     height: auto;
 }
+.copyright{
+    position: fixed;
+    left: 50px;
+    bottom: 50px;
+}
 .overlay{
     position: fixed;
     width: 100%;
@@ -63,10 +68,22 @@ body{
     backdrop-filter: blur(5px);
     border-radius: 10px;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.search-box #search{
+    flex-grow: 0;
+}
+.search-box #box{
+    flex-grow: 1;
 }
 @media screen and (max-width: 700px) {
     .favicon {
         left: 25px;
         top: 25px
+    }
+    .copyright{
+        left: 25px;
+        bottom: 25px;
     }
 }
