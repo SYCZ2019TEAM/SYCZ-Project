@@ -8,6 +8,6 @@ const setting = {
         "google":"https://google.com/search?q="
     }
 };
-const set_se = document.getSelectorAll("input[name='s_engine']");
+const set_se = document.querySelectorAll("input[name='s_engine']");
 console.log(set_se);
 init.loadImage();
