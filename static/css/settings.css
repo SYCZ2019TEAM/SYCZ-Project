@@ -95,7 +95,7 @@ a:hover{
     border-radius: 1px;
 }
 .setting{
-    position: relative;
+    position: absolute;
     right: -5;
     top: -5;
     width: 20px;
