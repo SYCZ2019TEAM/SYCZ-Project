@@ -89,8 +89,8 @@ a:hover{
     content: '';
     display: inline-block;
     position: relative;
-    left: 1px;
-    top: -7px;
+    left: 1.5px;
+    top: -7.5px;
     height: 7px;
     width: 7px;
     background: rgb(50,50,160);
