@@ -96,11 +96,7 @@ a:hover{
 }
 .setting{
     position: absolute;
-    right: -5px;
-    top: -5px;
+    right: 0;
     width: 20px;
     height: 20px;
-    padding: 5px;
-    transition: all 0.2s ease;
-    border-radius: 5px;
 }
