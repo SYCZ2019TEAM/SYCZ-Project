@@ -75,21 +75,21 @@ a:hover{
 .card-content input[type="radio"]+div{
     height: 10px;
     width: 10px;
-    border: 2px solid rgb(160,160,160);
+    border: 1px solid rgb(160,160,160);
     border-radius: 2px;
     margin-right: 5px;
 }
 .card-content input[type="radio"]:checked+div{
     height: 10px;
     width: 10px;
-    border: 2px solid rgb(50,50,160);
+    border: 1px solid rgb(50,50,160);
     border-radius: 2px;
 }
 .card-content input[type="radio"]:checked+div::before{
     content: '';
     display: inline-block;
     position: relative;
-    left: 1.5px;
+    left: 1px;
     top: -8px;
     height: 7px;
     width: 7px;
