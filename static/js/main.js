@@ -1,4 +1,10 @@
 import { page } from "./functions.js";
+function loadPage(){
+    let searchUrl = cookie.get("searchUrl");
+    if(searchUrl == null){
+        searchUrl = "https://bing.com/search?q=";
+    }
+}
 const init = new page.Init;
 const time = new page.Time;
 const cookie = new page.Cookie;
@@ -13,7 +19,7 @@ s_button.addEventListener('click',function(){
     const content = s_box.value;
     console.log(content);
     if(content != ''){
-        window.open('https://bing.com/search?q=' + content,'_self');
+        window.open(searchUrl + content,'_self');
     }
 });
 s_box.addEventListener('keypress',function(e){
@@ -23,7 +29,7 @@ s_box.addEventListener('keypress',function(e){
     else if(e.keyCode) keyCode = e.keyCode;
     if(keyCode == 13) {
         if(content != ''){
-            window.open('https://bing.com/search?q=' + s_box.value,'_self');
+            window.open(searchUrl + s_box.value,'_self');
         }
     };
 });
