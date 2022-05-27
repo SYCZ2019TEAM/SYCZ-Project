@@ -31,3 +31,4 @@ s_box.addEventListener('keypress',function(e){
         }
     };
 });
+console.log(searchUrl);
