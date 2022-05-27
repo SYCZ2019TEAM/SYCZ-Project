@@ -1,15 +1,11 @@
 import { page } from "./functions.js";
-var searchUrl = "";
-function loadPage(){
-    searchUrl = cookie.get("searchUrl");
-    if(searchUrl == null){
-        searchUrl = "https://bing.com/search?q=";
-    }
+var searchUrl = cookie.get("searchUrl");
+if(searchUrl == null){
+    searchUrl = "https://bing.com/search?q=";
 }
 const init = new page.Init;
 const time = new page.Time;
 const cookie = new page.Cookie;
-loadPage();
 init.loadImage();
 init.getBackground('./static/img/1920.jpg','image/JPEG');
 const clock = setInterval(function(){
