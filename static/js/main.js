@@ -1,6 +1,7 @@
 import { page } from "./functions.js";
+var searchUrl;
 function loadPage(){
-    let searchUrl = cookie.get("searchUrl");
+    searchUrl = cookie.get("searchUrl");
     if(searchUrl == null){
         searchUrl = "https://bing.com/search?q=";
     }
