@@ -79,7 +79,7 @@ a:hover{
     border-radius: 2px;
     margin-right: 5px;
     display: flex;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
 }
 .card-content input[type="radio"]:checked+div{
