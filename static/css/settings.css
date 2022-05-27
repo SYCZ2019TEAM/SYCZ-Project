@@ -94,3 +94,13 @@ a:hover{
     background: rgb(50,50,160);
     border-radius: 1px;
 }
+.setting{
+    position: relative;
+    right: -5;
+    top: -5;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    transition: all 0.2s ease;
+    border-radius: 5px;
+}
