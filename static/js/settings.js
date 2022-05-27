@@ -1,6 +1,6 @@
 import { page } from "./functions.js";
-const init = page.Init;
-const cookie = page.Cookie;
+const init = new page.Init;
+const cookie = new page.Cookie;
 const setting = {
     "s_engine":{
         "se_baidu":"https://baidu.com/s?wd=",
