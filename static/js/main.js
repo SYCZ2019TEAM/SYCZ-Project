@@ -3,7 +3,7 @@ const init = new page.Init;
 const time = new page.Time;
 const cookie = new page.Cookie;
 var searchUrl = cookie.get("searchUrl");
-if(searchUrl == null){
+if(searchUrl == ""){
     searchUrl = "https://bing.com/search?q=";
 }
 init.loadImage();
