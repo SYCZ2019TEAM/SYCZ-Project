@@ -9,5 +9,5 @@ const setting = {
     }
 };
 const set_se = document.querySelectorAll("input[name=\"s_engine\"]");
-console.log(set_se);
+console.log(set_se[0].value);
 init.loadImage();
