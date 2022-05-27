@@ -13,7 +13,7 @@ for(let i = 0; i < set_se.length; i++){
     set_se[i].children[0].addEventListener('change', function(){
         for(let i = 0; i < set_se.length; i++){
             if(set_se[i].children[0].checked){
-                console.log(set_se[i].children[2].innerText);
+                console.log(set_se[i].children[0].id);
             }
         }
     });
