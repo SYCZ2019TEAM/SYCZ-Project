@@ -85,7 +85,7 @@ a:hover{
     border: 2px solid rgb(50,50,160);
     border-radius: 2px;
 }
-.card-content input[type="radio"]:checked+div:before{
+.card-content input[type="radio"]:checked+div::before{
     margin: 3px;
     height: 6px;
     width: 6px;
