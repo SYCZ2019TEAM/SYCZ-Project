@@ -1,5 +1,5 @@
 import { page } from "./functions.js";
-var searchUrl;
+var searchUrl = "";
 function loadPage(){
     searchUrl = cookie.get("searchUrl");
     if(searchUrl == null){
