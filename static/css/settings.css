@@ -68,6 +68,7 @@ a:hover{
     display: flex;
     align-items: center;
     width: 100%;
+    margin: 2px !important;
 }
 .card-content input[type="radio"]{
     display: none;
