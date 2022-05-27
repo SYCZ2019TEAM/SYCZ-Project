@@ -88,9 +88,9 @@ a:hover{
 .card-content input[type="radio"]:checked+div::before{
     content: '';
     display: inline-block;
-    position: absolute;
-    left: 0;
-    top: 0;
+    position: relative;
+    left: 2px;
+    top: 2px;
     height: 7px;
     width: 7px;
     background: rgb(50,50,160);
