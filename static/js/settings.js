@@ -9,4 +9,4 @@ const setting = {
     }
 };
 const set_se = document.getElementsByName("s-engine");
-console.log(alert(set_se[0].value));
+console.log(set_se[0].value);
