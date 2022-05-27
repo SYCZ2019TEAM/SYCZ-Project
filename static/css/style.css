@@ -46,8 +46,8 @@ a:hover{
     position: fixed;
     right: 50px;
     top: 50px;
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     padding: 5px;
     transition: all 0.2s ease;
     border-radius: 5px;
@@ -127,6 +127,10 @@ a:hover{
         bottom: 25px;
         max-width: calc(100% - 50px);
     }
+    .setting{
+        right: 25px;
+        top: 25px;
+    }
 }
 @media screen and (max-height: 700px) {
     .favicon {
@@ -137,5 +141,9 @@ a:hover{
         left: 25px;
         bottom: 25px;
         max-width: calc(100% - 50px);
+    }
+    .setting{
+        right: 25px;
+        top: 25px;
     }
 }
