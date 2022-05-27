@@ -2,7 +2,7 @@ import { page } from "./functions.js";
 const init = new page.Init;
 const cookie = new page.Cookie;
 const setting = {
-    "s_engine":{
+    "s_engine":[{
         {
             "name":"se_bing",
             "url":"https://bing.com/search?q="
@@ -15,7 +15,7 @@ const setting = {
             "name":"se_baidu",
             "url":"https://baidu.com/s?wd="
         }
-    }
+    }]
 };
 const set_se = document.getElementsByName("set-se");
 let searchUrl = cookie.get('searchUrl');
