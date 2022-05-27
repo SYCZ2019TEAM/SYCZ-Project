@@ -9,4 +9,10 @@ const setting = {
     }
 };
 const set_se = document.getElementsByName("set-se");
-console.log(set_se[0].children[2].innerText);
+set_se.addEventListener('change', function(){
+    for(let i = 0; i < set_se.length; i++){
+        if(set_se[i].children[0].checked){
+            console.log(set_se[i].children[2].innerText);
+        }
+    }
+});
