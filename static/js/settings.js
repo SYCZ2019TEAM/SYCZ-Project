@@ -8,5 +8,5 @@ const setting = {
         "google":"https://google.com/search?q="
     }
 };
-const set_se = document.getElementsByName("s_engine");
+const set_se = document.getElementsByName("s-engine");
 console.log(alert(set_se[0].value));
