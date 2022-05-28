@@ -116,7 +116,7 @@ export const plugin = {
                     return "<div style=\"align-self:center;font-size:20px;font-weight:bolder;margin:auto 0;max-width:180px;\">距离 " + _year + " 年普通高等学校招生全国统一考试还有 " + countdown(_year + "/6/7") + " 天</div>";
                 }
                 else{
-                    return "<div style=\"align-self:center;font-size:20px;font-weight:bolder;margin:auto 0;max-width:180px;\">距离 " + _value[0] + " 还有" + countdown(_value[1]) + " 天</div>";
+                    return "<div style=\"align-self:center;font-size:20px;font-weight:bolder;margin:auto 0;max-width:180px;\">距离 " + _value[0] + " 还有  " + countdown(_value[1]) + " 天</div>";
                 }
             }
         }
