@@ -128,8 +128,8 @@ a:hover{
         max-width: calc(100% - 50px);
     }
     .setting{
-        right: 25px;
-        top: 25px;
+        right: 20px;
+        top: 20px;
     }
 }
 @media screen and (max-height: 700px) {
