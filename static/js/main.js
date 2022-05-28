@@ -14,7 +14,7 @@ const defaultPlugin = [
         "id":"zk",
         "title":"高考倒计时",
         "type":"countdown",
-        "value":["zk"]
+        "value":["gk"]
     }
 ];
 let searchUrl = cookie.get("searchUrl");
