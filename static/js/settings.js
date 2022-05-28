@@ -27,7 +27,7 @@ const defaultPlugin = [
         "id":"gk",
         "title":"高考倒计时",
         "type":"countdown",
-        "value":["zk"]
+        "value":["gk"]
     }
 ];
 const set_se = document.getElementsByName("set-se");
