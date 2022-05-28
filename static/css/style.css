@@ -176,6 +176,11 @@ a:hover{
     display: flex;
     flex-direction: column;
 }
+.plugin-box .card .content a{
+    margin: 0;
+    display: inline;
+    color: black;
+}
 .plugin-box *{
     margin: 5px;
 }

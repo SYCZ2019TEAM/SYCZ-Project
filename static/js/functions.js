@@ -84,10 +84,11 @@ export const plugin = {
             }
             this._data = _json;
         }
-        this.get = function(_type, _value = []){
+        this.get = function(_type, _value){
             if(_type == "countdown"){
+                console.log(_value);
                 if(_value == null){
-                    return;
+                    return "Undefined Value!";
                 }
                 if(_value == 'zk'){
                     const nowDate = new Date();
@@ -118,6 +119,17 @@ export const plugin = {
                 else{
                     return "<div style=\"align-self:center;font-size:20px;font-weight:bolder;margin:auto 0;max-width:180px;\">距离 " + _value[0] + " 还有  " + countdown(_value[1]) + " 天</div>";
                 }
+            }
+            else if(_type == "text"){
+                if(_value == null){
+                    return "Undefined Value!";
+                }
+                else{
+                    return "<div style=\"max-width:180px;\">" + _value[0] + "</div>";
+                }
+            }
+            else{
+                return "Undefined Type!";
             }
         }
         this.write = function(_selector){

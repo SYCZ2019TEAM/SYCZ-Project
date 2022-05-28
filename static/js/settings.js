@@ -24,7 +24,7 @@ const defaultPlugin = [
         "value":["zk"]
     },
     {
-        "id":"zk",
+        "id":"gk",
         "title":"高考倒计时",
         "type":"countdown",
         "value":["zk"]
