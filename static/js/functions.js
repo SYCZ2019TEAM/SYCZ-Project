@@ -102,6 +102,19 @@ export const plugin = {
                     }
                     return "<div style=\"align-self:center;font-size:20px;font-weight:bolder;margin:auto 0;max-width:180px;\">距离 " + _year + " 年常州中考还有 " + countdown(_year + "/6/18") + " 天</div>";
                 }
+                if(_value == 'gk'){
+                    const nowDate = new Date();
+                    let _year = nowDate.getFullYear();
+                    if(nowDate.getMonth() + 1 == 6){
+                        if(nowDate.getDate() >= 7){
+                            _year += 1;
+                        }
+                    }
+                    else if(nowDate.getMonth() + 1 > 6){
+                        _year += 1;
+                    }
+                    return "<div style=\"align-self:center;font-size:20px;font-weight:bolder;margin:auto 0;max-width:180px;\">距离 " + _year + " 年普通高等学校招生全国统一考试还有 " + countdown(_year + "/6/7") + " 天</div>";
+                }
                 else{
                     return "距离" + _value[0] + "还有" + countdown(_value[1]) + "天";
                 }
