@@ -1,11 +1,28 @@
-import { page } from "./functions.js";
+import { page, plugin } from "./functions.js";
 const init = new page.Init;
 const time = new page.Time;
 const cookie = new page.Cookie;
-var searchUrl = cookie.get("searchUrl");
+const p = new plugin.Parse;
+const defaultPlugin = [
+    {
+        "id":"zk",
+        "title":"中考倒计时",
+        "type":"countdown",
+        "value":"zk"
+    }
+];
+let searchUrl = cookie.get("searchUrl");
 if(searchUrl == null){
     searchUrl = "https://bing.com/search?q=";
 }
+cookie.set('searchUrl',searchUrl,365);
+let pluginData = cookie.get("pluginData");
+if(pluginData == null){
+    pluginData = JSON.stringify(defaultPlugin);
+}
+cookie.set('pluginData',pluginData,365);
+p.set(pluginData);
+p.write(".plugin-box");
 init.loadImage();
 init.getBackground('./static/img/1920.jpg','image/JPEG');
 const clock = setInterval(function(){

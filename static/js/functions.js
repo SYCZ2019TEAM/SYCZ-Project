@@ -1,3 +1,15 @@
+function countdown(_date){
+    const nowDate = new Date();
+    const tillDate = new Date(_date);
+    const _temp = tillDate.getTime() - nowDate.getTime();
+    const _left = Math.floor(_temp / (1000*60*60*24));
+    if(_left <= 0){
+        return 0;
+    }
+    else{
+        return _left;
+    }
+}
 export const page = {
     Init: function(){
         this.loadImage = function(){
@@ -61,6 +73,52 @@ export const page = {
                 if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
             }
             return null;
+        }
+    }
+}
+export const plugin = {
+    Parse: function(){
+        this.set = function(_json){
+            if(typeof(_json) == 'string'){
+                _json = JSON.parse(_json);
+            }
+            this._data = _json;
+        }
+        this.get = function(_type, _value = []){
+            if(_type == "countdown"){
+                if(_value == null){
+                    return;
+                }
+                if(_value == 'zk'){
+                    const nowDate = new Date();
+                    let _year = nowDate.getFullYear();
+                    if(nowDate.getMonth() + 1 == 6){
+                        if(nowDate.getDate() >= 18){
+                            _year += 1;
+                        }
+                    }
+                    else if(nowDate.getMonth() + 1 > 6){
+                        _year += 1;
+                    }
+                    return "<div style=\"align-self:center;font-size:20px;font-weight:bolder;margin:auto 0;max-width:180px;\">距离 " + _year + " 年常州中考还有 " + countdown(_year + "/6/18") + " 天</div>";
+                }
+                else{
+                    return "距离" + _value[0] + "还有" + countdown(_value[1]) + "天";
+                }
+            }
+        }
+        this.write = function(_selector){
+            let _tempData = "";
+            if(this._data == null){
+                return;
+            }
+            const pluginBox = document.querySelectorAll(_selector);
+            for(let i = 0; i < this._data.length; i++){
+                _tempData += '<div class="card" id="' + this._data[i]['id'] + '">\n<div class="title">' + this._data[i]['title'] + '</div>\n<div class="content">\n' + this.get(this._data[i]['type'], this._data[i]['value']) + '\n</div>\n</div>';
+            }
+            for(let i = 0; i < pluginBox.length; i++){
+                pluginBox[i].innerHTML = _tempData;
+            }
         }
     }
 }

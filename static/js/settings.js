@@ -1,5 +1,4 @@
 import { page } from "./functions.js";
-const init = new page.Init;
 const cookie = new page.Cookie;
 const setting = {
     "s_engine":[
@@ -17,11 +16,25 @@ const setting = {
         }
     ]
 };
+const defaultPlugin = [
+    {
+        "id":"zk",
+        "title":"中考倒计时",
+        "type":"countdown",
+        "value":["zk"]
+    }
+];
 const set_se = document.getElementsByName("set-se");
 let searchUrl = cookie.get('searchUrl');
 if(searchUrl == null){
     searchUrl = "https://bing.com/search?q=";
 }
+cookie.set('searchUrl',searchUrl,365);
+let pluginData = cookie.get("pluginData");
+if(pluginData == null){
+    pluginData = JSON.stringify(defaultPlugin);
+}
+cookie.set('pluginData',pluginData,365);
 for(let i = 0; i < set_se.length; i++){
     if(setting['s_engine'][i]['url'] == searchUrl){
         set_se[i].children[0].checked = true;
@@ -35,3 +48,8 @@ for(let i = 0; i < set_se.length; i++){
         }
     });
 }
+const set_plugin = document.getElementById("plugin");
+set_plugin.innerText = pluginData;
+set_plugin.addEventListener('input',function(){
+    cookie.set('pluginData',set_plugin.value.replace(/\n/g,""),365);
+});
