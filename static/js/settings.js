@@ -22,6 +22,12 @@ const defaultPlugin = [
         "title":"中考倒计时",
         "type":"countdown",
         "value":["zk"]
+    },
+    {
+        "id":"zk",
+        "title":"高考倒计时",
+        "type":"countdown",
+        "value":["zk"]
     }
 ];
 const set_se = document.getElementsByName("set-se");
@@ -34,7 +40,7 @@ let pluginData = cookie.get("pluginData");
 if(pluginData == null){
     pluginData = JSON.stringify(defaultPlugin);
 }
-cookie.set('pluginData',pluginData,365);
+cookie.set('pluginData',pluginData.replace(/\n/,""),365);
 for(let i = 0; i < set_se.length; i++){
     if(setting['s_engine'][i]['url'] == searchUrl){
         set_se[i].children[0].checked = true;

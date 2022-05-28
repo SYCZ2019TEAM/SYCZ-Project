@@ -8,7 +8,13 @@ const defaultPlugin = [
         "id":"zk",
         "title":"中考倒计时",
         "type":"countdown",
-        "value":"zk"
+        "value":["zk"]
+    },
+    {
+        "id":"zk",
+        "title":"高考倒计时",
+        "type":"countdown",
+        "value":["zk"]
     }
 ];
 let searchUrl = cookie.get("searchUrl");
@@ -20,7 +26,7 @@ let pluginData = cookie.get("pluginData");
 if(pluginData == null){
     pluginData = JSON.stringify(defaultPlugin);
 }
-cookie.set('pluginData',pluginData,365);
+cookie.set('pluginData',pluginData.replace(/\n/,""),365);
 p.set(pluginData);
 p.write(".plugin-box");
 init.loadImage();
