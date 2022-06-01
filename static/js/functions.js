@@ -125,7 +125,7 @@ export const plugin = {
                     return "Undefined Value!";
                 }
                 else{
-                    return "<div style=\"max-width:180px;\">" + _value[0] + "</div>";
+                    return "<div style=\"word-break: break-all;\">" + _value[0] + "</div>";
                 }
             }
             else{
