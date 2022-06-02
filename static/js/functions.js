@@ -79,7 +79,7 @@ export const page = {
 export const plugin = {
     Parse: function(){
         this.set = function(_json){
-            if(typeof(_json) == 'string'){
+            if(typeof(_json) == 'string' && _json != ''){
                 _json = JSON.parse(_json);
             }
             this._data = _json;
