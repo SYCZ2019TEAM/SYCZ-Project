@@ -1,3 +1,10 @@
 .p-usd *{
     margin: 0;
 }
+.p-usd p{
+    color: #d8e339;
+}
+.p-box{
+    margin: auto 0;
+    max-width:180px;
+}
