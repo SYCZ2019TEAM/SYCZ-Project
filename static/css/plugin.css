@@ -1,8 +1,19 @@
+small{
+    color: rgb(165,165,165);
+    font-size: 12px;
+}
 .p-usd *{
     margin: 0;
 }
 .p-usd p{
     color: #aeb54e;
+}
+.p-countdown{
+    align-self:center;
+}
+.p-countdown p{
+    font-size:20px;
+    font-weight:bolder;
 }
 .p-box{
     margin: auto 0;
