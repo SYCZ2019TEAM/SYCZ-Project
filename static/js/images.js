@@ -1,4 +1,4 @@
-import { page } from "./function.js";
+import { page } from "./functions.js";
 const _net = new page.Net();
 const _init = new page.Init();
 let _tag = "";
