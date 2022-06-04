@@ -18,6 +18,15 @@ export const page = {
                 imgTag[i].setAttribute('draggable', 'false');
             }
         }
+        this.getUrlValue = function(variable){
+            let query = window.location.search.substring(1);
+            let vars = query.split("&");
+            for (let i=0;i<vars.length;i++) {
+               let pair = lets[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+            }
+            return(false);
+        }
         this.getBackground = function(url,imgType = "image/png"){
             let xhr = new XMLHttpRequest();
             xhr.responseType="arraybuffer";
