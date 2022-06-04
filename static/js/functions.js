@@ -2,7 +2,7 @@ function countdown(_date){
     const nowDate = new Date();
     const tillDate = new Date(_date);
     const _temp = tillDate.getTime() - nowDate.getTime();
-    const _left = Math.floor(_temp / (1000*60*60*24));
+    const _left = Math.floor(_temp / (1000*60*60*24)) + 1;
     if(_left <= 0){
         return 0;
     }
@@ -110,7 +110,7 @@ export const plugin = {
                     else if(nowDate.getMonth() + 1 > 6){
                         _year += 1;
                     }
-                    return "<div style=\"align-self:center;font-size:20px;font-weight:bolder;margin:auto 0;max-width:180px;\">距离 " + _year + " 年常州中考还有 " + countdown(_year + "/6/18") + " 天</div>";
+                    return `<div class="p-box p-countdown"><small>距离 ${_year} 年常州市中考</small><p>还有 ${countdown(_year + "/6/17")} 天</p></div>`;
                 }
                 if(_value == 'gk'){
                     const nowDate = new Date();
@@ -126,7 +126,7 @@ export const plugin = {
                     return `<div class="p-box p-countdown"><small>距离 ${_year} 年普通高等学校招生全国统一考试</small><p>还有 ${countdown(_year + "/6/7")} 天</p></div>`;
                 }
                 else{
-                    return "<div style=\"align-self:center;font-size:20px;font-weight:bolder;margin:auto 0;max-width:180px;\">距离 " + _value[0] + " 还有  " + countdown(_value[1]) + " 天</div>";
+                    return `<div class="p-box p-countdown"><small>距离 ${_value[0]}</small><p>还有 ${countdown(_value[1])} 天</p></div>`;
                 }
             }
             else if(_type == "text"){
