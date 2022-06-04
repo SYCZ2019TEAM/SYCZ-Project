@@ -14,20 +14,20 @@ export const page = {
     Init: function(){
         this.loadImage = function(){
             const imgTag = document.getElementsByTagName("img");
-            for(var i = 0; i < imgTag.length; i++){
+            for(let i = 0; i < imgTag.length; i++){
                 imgTag[i].setAttribute('draggable', 'false');
             }
         }
         this.getBackground = function(url,imgType = "image/png"){
-            var xhr = new XMLHttpRequest();
+            let xhr = new XMLHttpRequest();
             xhr.responseType="arraybuffer";
             xhr.open('GET', url, true);
             xhr.onload=function(){
-                var result=xhr.response;
-                var file = new File([result], "foo."+imgType.match(/\/([A-Za-z]+)/)[1], {
+                let result=xhr.response;
+                let file = new File([result], "foo."+imgType.match(/\/([A-Za-z]+)/)[1], {
                 type: imgType,
                 });
-                var reader = new FileReader();
+                let reader = new FileReader();
                 reader.onload = function(evt) {
                     document.getElementsByTagName('body')[0].setAttribute('style','background-image: url(' + evt.target.result + ')');
                 };
@@ -58,6 +58,14 @@ export const page = {
             return _tempTime;
         }
     },
+    Net: function(){
+        this.getJson = function(_url){
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', _url, false);
+            xhr.send();
+            return JSON.parse(xhr.responseText);
+        }
+    },
     Cookie: function(){
         this.set = function(_name,_value,_exdays){
             let d = new Date();
@@ -76,6 +84,7 @@ export const page = {
         }
     }
 }
+const _net = new page.Net();
 export const plugin = {
     Parse: function(){
         this.set = function(_json){
@@ -127,6 +136,10 @@ export const plugin = {
                 else{
                     return "<div style=\"word-break: break-all;\">" + _value[0] + "</div>";
                 }
+            }
+            else if(_type == "usd"){
+                const _rate = _net.getJson("http://api.k780.com/?app=finance.rate&scur=USD&tcur=CNY&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4")["result"]["rate"];
+                return `<p>USD</p><h1>1.0000</h1><p>CNY</p><h1>${rate}</h1>`;
             }
             else{
                 return "Undefined Type!";
