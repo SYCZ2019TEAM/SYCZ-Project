@@ -141,6 +141,12 @@ export const plugin = {
                 const _result = _net.getJson("https://www.mxnzp.com/api/exchange_rate/aim?from=USD&to=CNY&app_id=onxudwg6nriqlluz&app_secret=bjhSOVpJbTE5ZmUvSDYvak93cGt3QT09")["data"]["price"];
                 return `<div class="p-card p-usd"><p>USD</p><h1>1.0000</h1><p>CNY</p><h1>${_result}</h1></div>`;
             }
+            else if(_type == "img"){
+                if(_value == null){
+                    return "Undefined Value!";
+                }
+                return `<img class="p-img p-card" href="${_value[0]}">`;
+            }
             else{
                 return "Undefined Type!";
             }
