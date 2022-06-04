@@ -70,7 +70,6 @@ export const page = {
     Net: function(){
         this.getJson = function(_url){
             let xhr = new XMLHttpRequest();
-            xhr.responseType="text/plain";
             xhr.open('GET', _url, false);
             xhr.send();
             return JSON.parse(xhr.responseText);
