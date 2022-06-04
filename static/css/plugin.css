@@ -1,6 +1,6 @@
 small{
     color: rgb(165,165,165);
-    font-size: 12px;
+    font-size: 15px;
 }
 .p-usd *{
     margin: 0;
@@ -10,6 +10,9 @@ small{
 }
 .p-countdown{
     align-self:center;
+}
+.p-countdown *{
+    margin: 5px 0;
 }
 .p-countdown p{
     font-size:20px;
