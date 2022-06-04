@@ -12,5 +12,5 @@ if(_init.getUrlValue("r18") != false){
 const _result = _net.getJson(`https://api.lolicon.app/setu/v2?proxy=p.luoli.icu&r18=${_r18}${_tag}`);
 const _data = _result["data"];
 if(_data != []){
-    window.open(_data[0]["urls"]["original"], "_self"):
+    window.open(_data[0]["urls"]["original"], "_self");
 }
