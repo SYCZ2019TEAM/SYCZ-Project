@@ -19,6 +19,7 @@ small{
     border-radius: 5px;
     width: 100%;
     height: auto;
+    margin: 0;
 }
 .p-box{
     margin: auto 0;
