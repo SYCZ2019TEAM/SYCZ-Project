@@ -141,7 +141,7 @@ export const plugin = {
                 const _result = _net.getJson("https://sapi.k780.com/?app=finance.rate&scur=USD&tcur=CNY&appkey=66100&sign=9ea2a84c2c6dedc689b1b4a904aadbc5")["result"];
                 const _rate = _result['rate'];
                 const _update = _result['update'];
-                return `<div class="p-box p-usd"><p>USD</p><h1>1.0000</h1><p>CNY</p><h1>${_rate}</h1><p style="color:rgb(165,165,165)"></p>更新时间: ${_update}</div>`;
+                return `<div class="p-box p-usd"><p>USD</p><h1>1.0000</h1><p>CNY</p><h1>${_rate}</h1><p style="color:rgb(165,165,165)">更新时间: ${_update}</p></div>`;
             }
             else{
                 return "Undefined Type!";
