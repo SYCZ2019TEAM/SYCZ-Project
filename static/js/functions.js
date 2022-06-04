@@ -138,10 +138,9 @@ export const plugin = {
                 }
             }
             else if(_type == "usd"){
-                const _result = _net.getJson("https://sapi.k780.com/?app=finance.rate&scur=USD&tcur=CNY&appkey=66100&sign=9ea2a84c2c6dedc689b1b4a904aadbc5")["result"];
+                const _result = _net.getJson("https://www.mxnzp.com/api/exchange_rate/aim?from=USD&to=CNY&app_id=onxudwg6nriqlluz&app_secret=bjhSOVpJbTE5ZmUvSDYvak93cGt3QT09")["result"];
                 const _rate = _result['rate'];
-                const _update = _result['update'];
-                return `<div class="p-box p-usd"><p>USD</p><h1>1.0000</h1><p>CNY</p><h1>${_rate}</h1><p style="color:rgb(165,165,165)">更新时间: ${_update}</p></div>`;
+                return `<div class="p-box p-usd"><p>USD</p><h1>1.0000</h1><p>CNY</p><h1>${_rate}</h1></div>`;
             }
             else{
                 return "Undefined Type!";
