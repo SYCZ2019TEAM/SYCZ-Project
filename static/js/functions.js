@@ -145,7 +145,7 @@ export const plugin = {
                 if(_value == null){
                     return "Undefined Value!";
                 }
-                return `<img class="p-img p-card" src="${_value[0]}">`;
+                return `<img class="p-img" src="${_value[0]}">`;
             }
             else{
                 return "Undefined Type!";
