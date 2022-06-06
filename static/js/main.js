@@ -36,18 +36,8 @@ if(searchUrl == null){
     searchUrl = "https://bing.com/search?q=";
 }
 cookie.set('searchUrl',searchUrl,365);
-let pluginData = cookie.get("pluginData");
-if(pluginData == null){
-    pluginData = JSON.stringify(defaultPlugin);
-}
-cookie.set('pluginData',pluginData.replace(/\n/,""),365);
-if(document.URL.match(/#sycz$/g)){
-    pluginData = JSON.stringify(syczPlugin);
-}
-p.set(pluginData);
-p.write(".plugin-box");
 init.loadImage();
-init.getBackground('./static/img/1920.jpg','image/JPEG');
+ansyc init.getBackground('./static/img/1920.jpg','image/JPEG');
 const clock = setInterval(function(){
     document.getElementsByClassName('time')[0].innerHTML = time.getTime();
 }, 50);
@@ -72,3 +62,13 @@ s_box.addEventListener('keypress',function(e){
     };
 });
 console.log(searchUrl);
+let pluginData = cookie.get("pluginData");
+if(pluginData == null){
+    pluginData = JSON.stringify(defaultPlugin);
+}
+cookie.set('pluginData',pluginData.replace(/\n/,""),365);
+if(document.URL.match(/#sycz$/g)){
+    pluginData = JSON.stringify(syczPlugin);
+}
+p.set(pluginData);
+p.write(".plugin-box");
