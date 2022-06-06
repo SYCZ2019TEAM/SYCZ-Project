@@ -27,7 +27,7 @@ export const page = {
             }
             return(false);
         }
-        this.getBackground = function(url,imgType = "image/png"){
+        this.getBackground = anysc function(url,imgType = "image/png"){
             let xhr = new XMLHttpRequest();
             xhr.responseType="arraybuffer";
             xhr.open('GET', url, true);
