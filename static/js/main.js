@@ -37,7 +37,7 @@ if(searchUrl == null){
 }
 cookie.set('searchUrl',searchUrl,365);
 init.loadImage();
-ansyc init.getBackground('./static/img/1920.jpg','image/JPEG');
+init.getBackground('./static/img/1920.jpg','image/JPEG');
 const clock = setInterval(function(){
     document.getElementsByClassName('time')[0].innerHTML = time.getTime();
 }, 50);
