@@ -156,6 +156,17 @@ export const plugin = {
                 }
                 return `<img class="p-img" src="${_value[0]}">`;
             }
+            else if(_type == "aword"){
+                if(_value == null){
+                    _value[0] = "i";
+                }
+                const _result = _net.getJson(`https://v1.hitokoto.cn/?c=${_value[0]}&encode=json&charset=utf-8`);
+                let _fromWho = _result["from_who"] + " - ";
+                if(_fromWho == null){
+                    _fromWho = "";
+                }
+                return `<div class="p-card"><h1>${_result["hitokoto"]}</h1><small>来自 ${_fromWho}《${_result["from"]}》</small></div>`;
+            }
             else{
                 return "Undefined Type!";
             }
