@@ -25,13 +25,13 @@ small{
     margin: auto 0;
     width:180px;
     height:155px;
-    overlay:auto;
+    overflow:auto;
     word-break: break-all;
 }
 .p-card{
     margin: auto 0;
     height:155px;
-    overlay:auto;
+    overflow:auto;
     word-break: break-all;
 }
 @media screen and (max-width: 500px){
