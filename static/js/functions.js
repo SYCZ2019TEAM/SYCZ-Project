@@ -165,7 +165,7 @@ export const plugin = {
                 if(_result["from_who"] == null){
                     _fromWho = "";
                 }
-                return `<div class="p-card"><h1>${_result["hitokoto"]}</h1><small>来自 ${_fromWho}《${_result["from"]}》</small></div>`;
+                return `<div class="p-box"><h1>${_result["hitokoto"]}</h1><small>来自 ${_fromWho}《${_result["from"]}》</small></div>`;
             }
             else{
                 return "Undefined Type!";
