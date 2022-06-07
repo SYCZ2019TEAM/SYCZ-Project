@@ -158,7 +158,7 @@ export const plugin = {
             }
             else if(_type == "aword"){
                 if(_value == null){
-                    _value[0] = "i";
+                    _value = "i";
                 }
                 const _result = _net.getJson(`https://international.v1.hitokoto.cn/?c=${_value[0]}&encode=json&charset=utf-8`);
                 let _fromWho = _result["from_who"] + " - ";
