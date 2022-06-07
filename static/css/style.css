@@ -150,7 +150,6 @@ large{
     background-color: rgb(130,130,130);
 }
 .plugin-box .card{
-    /* width: calc(100% - 50px); */
     flex-grow: 1;
     min-width: 195px;
     min-height: 195px;
@@ -178,6 +177,7 @@ large{
     overflow: auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .plugin-box .card .content a{
     margin: 0;
