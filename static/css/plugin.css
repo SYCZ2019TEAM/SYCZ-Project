@@ -34,6 +34,6 @@ small{
 }
 @media screen and (max-width: 500px){
     .p-box{
-        max-width: 100%;
+        width: 100%;
     }
 }
