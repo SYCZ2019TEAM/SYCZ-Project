@@ -160,7 +160,7 @@ export const plugin = {
                 if(_value == null){
                     _value[0] = "i";
                 }
-                const _result = _net.getJson(`https://v1.hitokoto.cn/?c=${_value[0]}&encode=json&charset=utf-8`);
+                const _result = _net.getJson(`https://international.v1.hitokoto.cn/?c=${_value[0]}&encode=json&charset=utf-8`);
                 let _fromWho = _result["from_who"] + " - ";
                 if(_fromWho == null){
                     _fromWho = "";
