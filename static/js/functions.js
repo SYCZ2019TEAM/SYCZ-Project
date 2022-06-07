@@ -162,7 +162,7 @@ export const plugin = {
                 }
                 const _result = _net.getJson(`https://international.v1.hitokoto.cn/?c=${_value[0]}&encode=json&charset=utf-8`);
                 let _fromWho = _result["from_who"] + " - ";
-                if(_fromWho == null){
+                if(_result["from_who"] == null){
                     _fromWho = "";
                 }
                 return `<div class="p-card"><h1>${_result["hitokoto"]}</h1><small>来自 ${_fromWho}《${_result["from"]}》</small></div>`;
