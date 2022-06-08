@@ -29,10 +29,9 @@ small{
 }
 .p-box, .p-card{
     margin: auto 0;
-    height:155px;
+    max-height:155px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     word-break: break-all;
 }
 @media screen and (max-width: 500px){
