@@ -90,14 +90,14 @@ medium{
     transition: all 0.2s ease;
 }
 .card-content input[type="radio"]:checked+div{
-    border: 2px solid rgb(50,50,160);
+    border: 2px solid rgb(46, 145, 223);
 }
 .card-content input[type="radio"]:checked+div::before{
     content: '';
     display: inline-block;
     height: 6px;
     width: 6px;
-    background: rgb(50,50,160);
+    background: rgb(46, 145, 223);
     border-radius: 6px;
 }
 .setting{
