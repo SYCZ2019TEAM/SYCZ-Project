@@ -9,7 +9,7 @@ let _r18 = "0";
 if(_init.getUrlValue("r18") != false){
     _r18 = `${_init.getUrlValue("r18")}`;
 }
-const _result = _net.getJson(`https://lovestu.com`);
+const _result = _net.getJson(`https://v1.hitokoto.cn/`);
 // const _result = _net.getJson(`https://api.lolicon.app/setu/v2?proxy=p.luoli.icu&r18=${_r18}${_tag}`);
 const _data = _result["data"];
 if(_data != []){
