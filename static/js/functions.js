@@ -2,7 +2,7 @@ function countdown(_date){
     const nowDate = new Date();
     const tillDate = new Date(_date);
     const _temp = tillDate.getTime() - nowDate.getTime();
-    const _left = Math.floor(_temp / (1000*60*60*24)) + 1;
+    const _left = Math.floor(_temp / (1000*60*60*24) + 1);
     if(_left <= 0){
         return 0;
     }
