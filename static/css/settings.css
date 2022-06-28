@@ -126,10 +126,10 @@ textarea{
     font-family: 'Microsoft Black';
     border: none;
     outline: none;
-    padding: 10px;
-    max-width: calc(100% - 30px);
-    min-width: calc(100% - 30px);
-    min-height: 100px;
+    padding: 20px;
+    max-width: calc(100% - 50px);
+    min-width: calc(100% - 50px);
+    min-height: 150px;
     border-radius: 5px;
     background-color: rgb(240, 240, 240);
 }
@@ -178,5 +178,16 @@ textarea::-webkit-scrollbar-thumb:hover{
     .setting{
         right: 20px;
         top: 20px;
+    }
+    textarea{
+        font-family: 'Microsoft Black';
+        border: none;
+        outline: none;
+        padding: 10px;
+        max-width: calc(100% - 30px);
+        min-width: calc(100% - 30px);
+        min-height: 150px;
+        border-radius: 5px;
+        background-color: rgb(240, 240, 240);
     }
 }
