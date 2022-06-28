@@ -123,6 +123,7 @@ medium{
     align-items: center;
 }
 textarea{
+    font-family: 'Microsoft Black';
     border: none;
     outline: none;
     padding: 10px;
