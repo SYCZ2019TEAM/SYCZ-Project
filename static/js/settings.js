@@ -13,6 +13,14 @@ const setting = {
         {
             "name":"se_baidu",
             "url":"https://baidu.com/s?wd="
+        },
+        {
+            "name":"se_toutiao",
+            "url":"https://so.toutiao.com/search?keyword="
+        },
+        {
+            "name":"se_toutiao_pc",
+            "url":"https://so.toutiao.com/search?dvpf=pc&keyword="
         }
     ]
 };
@@ -36,17 +44,10 @@ if(searchUrl == null){
     searchUrl = "https://bing.com/search?q=";
 }
 cookie.set('searchUrl',searchUrl,365);
-let pluginData = cookie.get("pluginData");
-if(pluginData == null){
-    pluginData = JSON.stringify(defaultPlugin);
-}
-cookie.set('pluginData',pluginData.replace(/\n/,""),365);
 for(let i = 0; i < set_se.length; i++){
     if(setting['s_engine'][i]['url'] == searchUrl){
         set_se[i].children[0].checked = true;
     }
-}
-for(let i = 0; i < set_se.length; i++){
     set_se[i].children[0].addEventListener('change', function(){
         if(set_se[i].children[0].checked){
             cookie.set('searchUrl',setting['s_engine'][i]['url'],365);
@@ -54,6 +55,11 @@ for(let i = 0; i < set_se.length; i++){
         }
     });
 }
+let pluginData = cookie.get("pluginData");
+if(pluginData == null){
+    pluginData = JSON.stringify(defaultPlugin);
+}
+cookie.set('pluginData',pluginData.replace(/\n/,""),365);
 const set_plugin = document.getElementById("plugin");
 set_plugin.innerText = pluginData;
 set_plugin.addEventListener('input',function(){
