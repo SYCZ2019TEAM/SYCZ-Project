@@ -163,6 +163,11 @@ textarea::-webkit-scrollbar-thumb:hover{
         top: 20px;
     }
 }
+[warn]{
+    background: rgb(255,212,212);
+    padding: 10px;
+    border-left: 3px #ff8787 solid;
+}
 @media screen and (max-height: 700px) {
     body{
         width: calc(100% - 40px);
