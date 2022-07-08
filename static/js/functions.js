@@ -172,7 +172,7 @@ export const plugin = {
                 if(_value == null){
                     _value = "i";
                 }
-                const _result = _net.getJson(`http://192.168.9.110:9000/?type=${_value}`);
+                const _result = _net.getJson(`https://192.168.9.110:9000/api/v1/aword?type=${_value}`);
                 let _fromWho = _result["data"]["author"];
                 if(["data"]["author"] == null){
                     _fromWho = "";
