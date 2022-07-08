@@ -168,6 +168,17 @@ export const plugin = {
                 }
                 return `<div class="p-box"><h2>${_result["hitokoto"]}</h2><small>来自 ${_fromWho}《${_result["from"]}》</small></div>`;
             }
+            else if(_type == "aword-grass"){
+                if(_value == null){
+                    _value = "i";
+                }
+                const _result = _net.getJson(`http://192.168.9.110/?type=${_value}`);
+                let _fromWho = _result["data"]["author"];
+                if(["data"]["author"] == null){
+                    _fromWho = "";
+                }
+                return `<div class="p-box"><h2>${_result["data"]["hitokoto"]}</h2><small>来自 ${_fromWho}</small></div>`;
+            }
             else{
                 return "Undefined Type!";
             }
