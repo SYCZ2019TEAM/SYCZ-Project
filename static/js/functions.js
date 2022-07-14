@@ -105,7 +105,6 @@ export const plugin = {
         }
         this.get = function(_type, _value){
             if(_type == "countdown"){
-                console.log(_value);
                 if(_value == null){
                     return "Undefined Value!";
                 }
