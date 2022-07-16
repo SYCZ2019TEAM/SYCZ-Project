@@ -2,35 +2,37 @@ import { page, plugin } from "./functions.js";
 const init = new page.Init;
 const time = new page.Time;
 const cookie = new page.Cookie;
+const net = new page.Net;
 const p = new plugin.Parse;
-const defaultPlugin = [
-    {
-        "id":"zk",
-        "title":"中考倒计时",
-        "type":"countdown",
-        "value":["zk"]
-    },
-    {
-        "id":"gk",
-        "title":"高考倒计时",
-        "type":"countdown",
-        "value":["gk"]
-    }
-];
-const syczPlugin = [
-    {
-        "id":"zk",
-        "title":"中考倒计时",
-        "type":"countdown",
-        "value":["zk"]
-    },
-    {
-        "id":"sy",
-        "title":"关于实验初中",
-        "type":"text",
-        "value":["<p>常州市实验初级中学是常州市教育局直属学校，是由具有八十余年悠久历史、优良传统、卓著声誉的原常州市第二十一中学和第二十七中学在1997年8月合并组建而成。</p><p>常州市实验初级中学官网: <a href=\"http://www.sycz.czedu.cn/\">点击进入</a></p>"]
-    }
-];
+const template = net.getJson("/template.json");
+// const defaultPlugin = [
+//     {
+//         "id":"zk",
+//         "title":"中考倒计时",
+//         "type":"countdown",
+//         "value":["zk"]
+//     },
+//     {
+//         "id":"gk",
+//         "title":"高考倒计时",
+//         "type":"countdown",
+//         "value":["gk"]
+//     }
+// ];
+// const syczPlugin = [
+//     {
+//         "id":"zk",
+//         "title":"中考倒计时",
+//         "type":"countdown",
+//         "value":["zk"]
+//     },
+//     {
+//         "id":"sy",
+//         "title":"关于实验初中",
+//         "type":"text",
+//         "value":["<p>常州市实验初级中学是常州市教育局直属学校，是由具有八十余年悠久历史、优良传统、卓著声誉的原常州市第二十一中学和第二十七中学在1997年8月合并组建而成。</p><p>常州市实验初级中学官网: <a href=\"http://www.sycz.czedu.cn/\">点击进入</a></p>"]
+//     }
+// ];
 let searchUrl = cookie.get("searchUrl");
 if(searchUrl == null){
     searchUrl = "https://bing.com/search?q=";
@@ -64,11 +66,14 @@ s_box.addEventListener('keypress',function(e){
 console.log(searchUrl);
 let pluginData = cookie.get("pluginData");
 if(pluginData == null){
-    pluginData = JSON.stringify(defaultPlugin);
+    pluginData = JSON.stringify(template.default);
 }
 cookie.set('pluginData',pluginData.replace(/\n/,""),365);
-if(document.URL.match(/#sycz$/g)){
-    pluginData = JSON.stringify(syczPlugin);
+if(document.URL.match(/#.*/g)){
+    const tempID = document.URL.replace(/.*#/gi, '');
+    if(template[tempID]){
+        pluginData = JSON.stringify(template[tempID]);
+    }
 }
 p.set(pluginData);
 p.write(".plugin-box");
