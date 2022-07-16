@@ -31,9 +31,29 @@
     "hs":[
         {
             "id":"gk",
-            "title":"高考倒计时".
+            "title":"高考倒计时",
             "type":"countdown",
             "value":["gk"]
+        },
+        {
+            "id":"aword",
+            "title":"一言",
+            "type":"aword",
+            "value":["i"]
+        }
+    ],
+    "acgn":[
+        {
+            "id":"aword",
+            "title":"一言",
+            "type":"aword",
+            "value":["a"]
+        },
+        {
+            "id":"img",
+            "title":"美图",
+            "type":"img",
+            "value":["http://www.dmoe.cc/random.php"]
         }
     ]
 }
